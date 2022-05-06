@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS lost_pet_db;
+CREATE DATABASE lost_pet_db;
