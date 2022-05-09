@@ -1,37 +1,58 @@
 const sequelize = require("../config/connection")
-const {User,Blog} = require("../models")
+const {User,Pet} = require("../models")
 
 const users = [
     {
-        username:"joe",
-        password:"password"
+        username:"Jeff",
+        password:"password123"
     },
     {
-        username:"otherjoe",
-        password:"password1"
+        username:"Bakary",
+        password:"password123"
     },
     {
-        username:"therealjoe",
-        password:"Password1"
+        username:"Hayden",
+        password:"password123"
+    },
+    {
+        username:"Pablito",
+        password:"password123"
     }
 ]
 
-const blogs = [
+const pets = [
     {
-        title:"my first blog",
-        body:"Welcome to my blog, im going to do this every day! Like share subscribe",
-        UserId:1
+        name: "Fluffy",
+        petDescription: "Is a fat golden retriever",
+        currentStatus:true,
+        animal: "Dog",
+        breed: "Golden Retriever",
+        color: "Yellow",
+        lastLocation: "address",
+        lastTime: 11,
     },
     {
-        title:"my final blog",
-        body:"I cant do this anymore, blogging every day is too hard.  It was a fun half week yall",
-        UserId:1
+        name: "Floofy",
+        petDescription: "Is a fat chocolate lab",
+        currentStatus:true,
+        animal: "Dog",
+        breed: "Chocolate lab",
+        color: "brown",
+        lastLocation: "address",
+        lastTime: 11,
     },
     {
-        title:"Cats: a review",
-        body:"I love cats I love every kind of cat.  I want to hug all them but you cant. Cant hug every cat......Cant hug every cat. ",
-        UserId:2
+        name: "Quiet cat",
+        petDescription: "Is a quiet cat",
+        currentStatus:false,
+        animal: "cat",
+        breed: "some sort of cat",
+        color: "blue",
+        lastLocation: "address",
+        lastTime: 11,
     }
+ 
+    
 ]
 
 const feedMe = async ()=>{
@@ -40,7 +61,7 @@ const feedMe = async ()=>{
         await User.bulkCreate(users,{
             individualHooks:true
         });
-        await Blog.bulkCreate(blogs);
+        await Pet.bulkCreate(pets);
         process.exit(0);
     } catch(err){
         console.log(err)

@@ -1,11 +1,13 @@
 const express = require("express");
 const router = express.Router();
-const {User,Pet} = require("../models");
-
+const {User, Pet} = require("../models/");
+const bcrypt  = require("bcrypt");
 
 //find all
 router.get("/", (req, res) => {
-  Pet.findAll({})
+  Pet.findAll({
+    // include:[User]
+  })
     .then(dbPets => {
       res.json(dbPets);
     })
@@ -28,15 +30,12 @@ router.get("/:id", (req, res) => {
 
 //create Pet
 router.post("/", (req, res) => {
-  if(!req.session.user){
-    return res.status(401).json({msg:"ya gotta login to create a Pet post!"})
-}
-  Pet.create({
-    title:req.body.title,
-    body:req.body.body,
-    UserId:req.session.user.id
-  })
+  Pet.create(req.body)
     .then(newPet => {
+      req.session.Pet = {
+        id:newPet.id,
+        Petname:newPet.Petname
+      }
       res.json(newPet);
     })
     .catch(err => {
@@ -44,7 +43,6 @@ router.post("/", (req, res) => {
       res.status(500).json({ msg: "an error occured", err });
     });
 });
-
 //update Pet
 router.put("/:id", (req, res) => {
   Pet.update(req.body, {

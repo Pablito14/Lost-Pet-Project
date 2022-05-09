@@ -37,11 +37,11 @@ Pet.init({
         type:DataTypes.INTEGER,
         allowNull:false
     },
-    picture: {
-        type:DataTypes.BLOB,
-        //or type: Sequelize.BLOB
+    // picture: {
+    //     type:DataTypes.BLOB,
+    //     //or type: Sequelize.BLOB
         
-    }
+    // }
 },{
     sequelize
 });
