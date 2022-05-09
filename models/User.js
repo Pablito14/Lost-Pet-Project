@@ -26,6 +26,13 @@ User.init({
           isEmail: true,
         },
       },
+      pet_id: {
+        type: DataTypes.INTEGER,
+        references: {
+          model: "Pet",
+          key: "id",
+        },
+    },
 },{
     hooks:{
         beforeCreate:async userdata=>{
