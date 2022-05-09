@@ -1,11 +1,11 @@
 const User = require("./User");
-const Blog = require("./Blog");
+const Pet = require("./Pet");
 
-User.hasMany(Blog);
-Blog.belongsTo(User)
+User.hasMany(Pet);
+Pet.belongsTo(User)
 
 
 module.exports = {
     User,
-    Blog
+    Pet
 }
