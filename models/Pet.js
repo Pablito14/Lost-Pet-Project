@@ -5,6 +5,12 @@ class Pet extends Model {}
 
 Pet.init({
     // add properites here, ex:
+    id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        primaryKey: true,
+        autoIncrement: true,
+      },
     name: {
         type:DataTypes.STRING,
         allowNull:false
@@ -42,6 +48,13 @@ Pet.init({
     //     //or type: Sequelize.BLOB
         
     // }
+    user_id: {
+        type: DataTypes.INTEGER,
+        references: {
+          model: "users",
+          key: "id",
+        },
+    },
 },{
     sequelize
 });
