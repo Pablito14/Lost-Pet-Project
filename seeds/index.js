@@ -4,19 +4,23 @@ const {User,Pet} = require("../models")
 const users = [
     {
         username:"Jeff",
-        password:"password123"
+        password:"password123",
+        email: "joel@go.com"
     },
     {
         username:"Bakary",
-        password:"password123"
+        password:"password123",
+        email: "bak@go.com"
     },
     {
         username:"Hayden",
-        password:"password123"
+        password:"password123",
+        email: "lora@go.com"
     },
     {
         username:"Pablito",
-        password:"password123"
+        password:"password123",
+        email: "Mar@go.com"
     }
 ]
 
@@ -30,6 +34,7 @@ const pets = [
         color: "Yellow",
         lastLocation: "address",
         lastTime: 11,
+        user_id:1,
     },
     {
         name: "Floofy",
@@ -40,6 +45,7 @@ const pets = [
         color: "brown",
         lastLocation: "address",
         lastTime: 11,
+        user_id:2,
     },
     {
         name: "Quiet cat",
@@ -50,6 +56,7 @@ const pets = [
         color: "blue",
         lastLocation: "address",
         lastTime: 11,
+        user_id:3,
     }
  
     

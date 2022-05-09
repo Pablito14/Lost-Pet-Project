@@ -6,6 +6,12 @@ class User extends Model {}
 
 User.init({
     // add properites here, ex:
+    id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        primaryKey: true,
+        autoIncrement: true,
+      },
     username: {
          type: DataTypes.STRING,
          allowNull:false,
@@ -26,13 +32,7 @@ User.init({
           isEmail: true,
         },
       },
-      pet_id: {
-        type: DataTypes.INTEGER,
-        references: {
-          model: "Pet",
-          key: "id",
-        },
-    },
+   
 },{
     hooks:{
         beforeCreate:async userdata=>{
@@ -41,6 +41,7 @@ User.init({
         }
     },
     sequelize,
+    modelName : "User",
 });
 
 module.exports=User
