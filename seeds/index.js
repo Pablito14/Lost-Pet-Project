@@ -5,22 +5,22 @@ const users = [
     {
         username:"Jeff",
         password:"password123",
-        email:"jeff@jeff.com"
+        email: "joel@go.com"
     },
     {
         username:"Bakary",
         password:"password123",
-        email: "bakary@bakary.com"
+        email: "bak@go.com"
     },
     {
         username:"Hayden",
         password:"password123",
-        email: "hayden@hayden.com"
+        email: "lora@go.com"
     },
     {
         username:"Pablito",
         password:"password123",
-        email:"pablo@pablo.com"
+        email: "Mar@go.com"
     }
 ]
 
@@ -34,6 +34,7 @@ const pets = [
         color: "Yellow",
         lastLocation: "address",
         lastTime: 11,
+        user_id:1,
     },
     {
         name: "Floofy",
@@ -44,6 +45,7 @@ const pets = [
         color: "brown",
         lastLocation: "address",
         lastTime: 11,
+        user_id:2,
     },
     {
         name: "Quiet cat",
@@ -54,6 +56,7 @@ const pets = [
         color: "blue",
         lastLocation: "address",
         lastTime: 11,
+        user_id:3,
     }
  
     
