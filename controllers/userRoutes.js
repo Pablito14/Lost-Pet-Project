@@ -101,5 +101,9 @@ router.delete("/:id", (req, res) => {
   });
 });
 
+// router.get('/', async (req, res) => {
+//   res.render('all', {dishes});
+// });
+
 
 module.exports = router;
