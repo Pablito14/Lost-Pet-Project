@@ -5,6 +5,7 @@ const session = require("express-session");
 const sequelize = require("./config/connection");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
+
 // Sets up the Express App
 // =============================================================
 const app = express();
@@ -25,6 +26,7 @@ const sess = {
     db: sequelize
   })
 };
+
 app.use(session(sess));
 // Static directory
 app.use(express.static('public'));
