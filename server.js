@@ -77,14 +77,31 @@ app.use(express.static('public'));
 // app.set('view engine', 'handlebars');
 
 app.use('/',allRoutes);
-app.get('/', (req,res) => {
+
+app.get('/about', (req,res) => {
+  res.render('about', {layout : 'main'});
+})
+
+app.get('/browse', (req,res) => {
+  res.render('browse', {layout : 'main'});
+})
+
+app.get('/dashboard', (req,res) => {
+  res.render('dashboard', {layout : 'main'});
+})
+
+app.get('/home', (req,res) => {
   res.render('home', {layout : 'main'});
 })
 
-app.use('/',allRoutes);
-app.get('/', (req,res) => {
-  res.render('dashboard', {layout : 'main'});
+app.get('/login', (req,res) => {
+  res.render('login', {layout : 'main'});
 })
+
+app.get('/signup', (req,res) => {
+  res.render('signup', {layout : 'main'});
+})
+
 
 // sequelize.sync({ force: true }).then(function() {
 //     app.listen(PORT, function() {
