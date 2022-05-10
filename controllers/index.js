@@ -7,8 +7,8 @@ router.use("/api/users",userRoutes)
 const petRoutes = require("./petRoutes");
 router.use("/api/pets",petRoutes)
 
-const imageRoutes = require("./imageRoutes");
-router.use("/api/images",imageRoutes)
+// const imageRoutes = require("./imageRoutes");
+// router.use("/api/images",imageRoutes)
 
 router.get("/showsessions",(req,res)=>{
     res.json(req.session)
