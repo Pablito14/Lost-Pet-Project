@@ -37,7 +37,6 @@ app.set('view engine', 'handlebars');
 
 
 
-app.use("/", allRoutes);
 app.use('/',allRoutes);
 app.get('/about', (req,res) => {
   res.render('about', {layout : 'main'});
@@ -94,16 +93,6 @@ sequelize.sync({ force: false }).then(function() {
 // const hbs = exphbs.create({});
 // app.engine('handlebars', hbs.engine);
 // app.set('view engine', 'handlebars');
-
-// app.use('/',allRoutes);
-// app.get('/', (req,res) => {
-//   res.render('home', {layout : 'main'});
-// })
-
-// app.use('/',allRoutes);
-// app.get('/', (req,res) => {
-//   res.render('dashboard', {layout : 'main'});
-// })
 
 // sequelize.sync({ force: true }).then(function() {
 //     app.listen(PORT, function() {
