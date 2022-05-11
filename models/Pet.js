@@ -43,11 +43,11 @@ Pet.init({
         type:DataTypes.INTEGER,
         allowNull:false
     },
-    // picture: {
-    //     type:DataTypes.BLOB,
-    //     //or type: Sequelize.BLOB
+    picture: {
+        type:DataTypes.STRING,
+        //or type: Sequelize.BLOB -- allow null?
         
-    // }
+    },
     user_id: {
         type: DataTypes.INTEGER,
         references: {
