@@ -10,6 +10,9 @@ router.use("/api/pets",petRoutes)
 // const imageRoutes = require("./imageRoutes");
 // router.use("/api/images",imageRoutes)
 
+// const browseRoute = require("./imageRoutes");
+// router.use("/api/images",imageRoutes)
+
 router.get("/showsessions",(req,res)=>{
     res.json(req.session)
 })
