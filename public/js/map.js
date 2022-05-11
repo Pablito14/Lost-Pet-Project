@@ -15,7 +15,7 @@ let myAnswers = " ";
         uluru  = { lat:err.coords.latitude, lng: err.coords.longitude }
         
         const map = new google.maps.Map(document.getElementById("map"), {
-          zoom: 13,
+          zoom: 10,
           center: uluru,
         });
         // The marker, positioned at Uluru
