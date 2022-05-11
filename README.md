@@ -34,7 +34,7 @@ The knowledge gained from this project is collectivily utilization of NODE and E
 ## Usage
 
 
-![Wireframe_Petfinder](./assets/Untitled-2022-04-16-2241_50.png)
+![Wireframe_Petfinder](./assets/wireframe.png)
         
 ## Credits
 Pablo Rosales, Bakary Sylla, Jeff Schmidt, Hayden Kiltoff
