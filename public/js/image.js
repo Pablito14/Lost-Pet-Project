@@ -30,3 +30,11 @@ form.addEventListener('submit', async (e) => {
 
 })
 
+
+//CREATE PET FUNCTION
+//upon submitting create pet form, post new pet to database.
+//Pet.create({name: 'catboi', species: 'dog', picture: imageUrl})
+
+//WHEREVER U WANT TO DISPLAY PET (probably on home route, user route, etc) [on a seperate js file]
+//create h2 element for pet name, h3 element for species, and img element for picture
+//img.src = pet.picture <img src="https://cloudinary.com/upload/agdsf456sdf6465">
