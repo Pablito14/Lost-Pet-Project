@@ -5,13 +5,14 @@ const session = require("express-session");
 const sequelize = require("./config/connection");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
-
 // Sets up the Express App
 // =============================================================
 const app = express();
 const PORT = process.env.PORT || 3002;
+
 // Requiring our models for syncing
 const { User, Pet } = require("./models");
+
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -34,8 +35,6 @@ app.use(express.static('public'));
 const hbs = exphbs.create({});
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
-
-
 
 app.use('/',allRoutes);
 app.get('/about', (req,res) => {
@@ -109,23 +108,3 @@ sequelize.sync({ force: false }).then(function() {
 //     console.log('App listening on PORT ' + PORT);
 //     });
 // // });
-
-app.use('/',allRoutes);
-app.get('/about', (req,res) => {
-  res.render('about', {layout : 'main'});
-})
-app.get('/browse', (req,res) => {
-  res.render('browse', {layout : 'main'});
-})
-app.get('/dashboard', (req,res) => {
-  res.render('dashboard', {layout : 'main'});
-})
-app.get('/home', (req,res) => {
-  res.render('home', {layout : 'main'});
-})
-app.get('/login', (req,res) => {
-  res.render('login', {layout : 'main'});
-})
-app.get('/signup', (req,res) => {
-  res.render('signup', {layout : 'main'});
-})
