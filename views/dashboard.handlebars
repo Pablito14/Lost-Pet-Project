@@ -1,43 +1,47 @@
-{{!-- <form id="upload_form" method="post" enctype="multipart/form-data">
-  <label for="file" id="choose_meme">upload</label>
-  <input id="file" type="file" style="display: none;">
-  <input type="submit"></input>
-</form> --}}
-<script src="./js/image.js"></script>
 <div class="card dashboard" style="width: 45vw;">
   <ul class="list-group list-group-flush">
     <h3>Report Lost Pet</h3>
-    <li class="list-group-item"><input style="width:39vw;" placeholder="Name of Pet"></li>
-    <li class="list-group-item"><input style="width:39vw;" placeholder="Pet Description"></li>
+    <li   class="list-group-item"><input style="width:39vw;text-align:center" id="petName"placeholder="Name of Pet"></li>
+    <li class="list-group-item"><input style="width:39vw;text-align:center" id="petDescription"placeholder="Pet Description"></li>
     <li class="list-group-item">
       <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
-          data-bs-toggle="dropdown" aria-expanded="false">
-          Dropdown button
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <li><a class="dropdown-item" href="#">Dog</a></li>
-          <li><a class="dropdown-item" href="#">Cat</a></li>
-          <li><a class="dropdown-item" href="#">Other</a></li>
-        </ul>
+        <select id="animalChoice" class="btn btn-light btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton1"
+          data-toggle="dropdown" aria-expanded="false" style="width:39vw;">
+          <option class="dropdown-item">Please choose animal type from the following</option>
+          <option class="dropdown-item">Dog</option>
+          <option class="dropdown-item">Cat</option>
+          <option class="dropdown-item">Reptile</option>
+          <option class="dropdown-item">Guinea Pig</option>
+          <option class="dropdown-item">Horse</option>
+          <option class="dropdown-item">Turtle</option>
+          <option class="dropdown-item">Other</option>
+        </select>
       </div>
     </li>
-    <li class="list-group-item"><input style="width:39vw;"></li>
-    <li class="list-group-item"><input style="width:39vw;"></li>
-    <li class="list-group-item"><input style="width:39vw;"></li>
-    <li class="list-group-item"><input style="width:39vw;"></li>
-    <li class="list-group-item"><input style="width:39vw;"></li>
-    <li class="list-group-item">
-      <form id="upload_form" method="post" enctype="multipart/form-data" style="padding:0px 40px 0px 40px ">
-        <label for="file" id="choose_meme"><i class="fa fa-download" style="font-size:36px"></i></label>
-        <input id="file" type="file" style="display: none; padding: l 40px;">
-        <input type="submit" style="padding: 0px 40px 0px 40px  ;"></input>
-      </form>
+    <li  class="list-group-item">
+      <div class="dropdown">
+        <select id="status"class="btn btn-light btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton1"
+          data-toggle="dropdown" aria-expanded="false" style="width:39vw;">
+          <option class="dropdown-item">Please choose pet status from the following options</option>
+          <option class="dropdown-item">Missing</option>
+          <option class="dropdown-item">Found</option>
+        </select>
+      </div>
     </li>
-  </ul>
-  <div class="card-footer"><button>Submit Information</button>
+    </li>
+    <li class="list-group-item"><input style="width:39vw;text-align:center" id="breed"placeholder="Breed"></li>
+    <li  class="list-group-item"><input style="width:39vw;text-align:center" id="color"placeholder="Color"></li>
+    <li class="list-group-item"><input style="width:39vw;text-align:center" id="lastLocation"placeholder="Last Location"></li>
+    <li class="list-group-item"><input style="width:39vw;text-align:center"id="lastTime"
+        placeholder="What time did your pet go missing?"></li>
 
-  </div>
-</div>
 
-<a href="./browse"><button type="button" class="btn btn-primary browse-home"></button></a>
+    <form id="upload_form" method="post" enctype="multipart/form-data">
+      <label for="file" <i class="fa fa-download" style="font-size:36px"></i></label>
+      <input id="file" type="file" style="display: none;">
+      <input type="submit"></input>
+    </form>
+
+
+    <a href="./browse"><button type="button" class="btn btn-primary browse-home"></button></a>
+    <script src="./js/image.js"></script>
