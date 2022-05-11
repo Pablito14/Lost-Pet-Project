@@ -3,7 +3,7 @@ const router = express.Router();
 const { User, Pet } = require("../models/");
 const bcrypt = require("bcrypt");
 
-//find all
+// find all
 router.get("/", (req, res) => {
   Pet.findAll({
     // include:[User]
@@ -16,7 +16,8 @@ router.get("/", (req, res) => {
       res.status(500).json({ msg: "an error occured", err });
     });
 });
-//find one
+
+// find one
 router.get("/:id", (req, res) => {
   Pet.findByPk(req.params.id, {})
     .then(dbPet => {
@@ -28,7 +29,7 @@ router.get("/:id", (req, res) => {
     });
 });
 
-//create Pet
+// create Pet
 router.post("/", (req, res) => {
   console.log(req.body)
   const newPet = {
@@ -49,7 +50,8 @@ router.post("/", (req, res) => {
     });
 
 });
-//update Pet
+
+// update Pet
 router.put("/:id", (req, res) => {
   Pet.update(req.body, {
     where: {
@@ -64,7 +66,7 @@ router.put("/:id", (req, res) => {
     });
 });
 
-//delete a Pet
+// delete a Pet
 router.delete("/:id", (req, res) => {
   Pet.destroy({
     where: {

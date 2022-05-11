@@ -1,47 +1,64 @@
-<div class="card dashboard" style="width: 45vw;">
-  <ul class="list-group list-group-flush">
-    <h3>Report Lost Pet</h3>
-    <li   class="list-group-item"><input style="width:39vw;text-align:center" id="petName"placeholder="Name of Pet"></li>
-    <li class="list-group-item"><input style="width:39vw;text-align:center" id="petDescription"placeholder="Pet Description"></li>
-    <li class="list-group-item">
-      <div class="dropdown">
-        <select id="animalChoice" class="btn btn-light btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton1"
-          data-toggle="dropdown" aria-expanded="false" style="width:39vw;">
-          <option class="dropdown-item">Please choose animal type from the following</option>
-          <option class="dropdown-item">Dog</option>
-          <option class="dropdown-item">Cat</option>
-          <option class="dropdown-item">Reptile</option>
-          <option class="dropdown-item">Guinea Pig</option>
-          <option class="dropdown-item">Horse</option>
-          <option class="dropdown-item">Turtle</option>
-          <option class="dropdown-item">Other</option>
-        </select>
-      </div>
-    </li>
-    <li  class="list-group-item">
-      <div class="dropdown">
-        <select id="status"class="btn btn-light btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton1"
-          data-toggle="dropdown" aria-expanded="false" style="width:39vw;">
-          <option class="dropdown-item">Please choose pet status from the following options</option>
-          <option class="dropdown-item">Missing</option>
-          <option class="dropdown-item">Found</option>
-        </select>
-      </div>
-    </li>
-    </li>
-    <li class="list-group-item"><input style="width:39vw;text-align:center" id="breed"placeholder="Breed"></li>
-    <li  class="list-group-item"><input style="width:39vw;text-align:center" id="color"placeholder="Color"></li>
-    <li class="list-group-item"><input style="width:39vw;text-align:center" id="lastLocation"placeholder="Last Location"></li>
-    <li class="list-group-item"><input style="width:39vw;text-align:center"id="lastTime"
-        placeholder="What time did your pet go missing?"></li>
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <div class="card dashboard">
+        <ul class="list-group list-group-flush">
+          <h3>Report Lost Pet</h3>
+          <li class="list-group-item"><input style="width:100%;text-align:center" id="petName" placeholder="Name of Pet"></li>
+          <li class="list-group-item"><input style="width:100%;text-align:center"id="petDescription" placeholder="Pet Description"></li>
+          <li class="list-group-item">
+            <div class="dropdown">
+              <select id="animalChoice"class="btn btn-light btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                data-toggle="dropdown" aria-expanded="false" style="width:100%;">
 
+                <option class="dropdown-item">Type of Animal</option>
+                <option class="dropdown-item">Dog</option>
+                <option class="dropdown-item">Cat</option>
+                <option class="dropdown-item">Reptile</option>
+                <option class="dropdown-item">Guinea Pig</option>
+                <option class="dropdown-item">Horse</option>
+                <option class="dropdown-item">Turtle</option>
+                <option class="dropdown-item">Other</option>
 
-    <form id="upload_form" method="post" enctype="multipart/form-data">
+              </select>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="dropdown">
+              <select id="status"class="btn btn-light btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                data-toggle="dropdown" aria-expanded="false" style="width:100%;">
+
+                <option class="dropdown-item">Current status of pet</option>
+                <option class="dropdown-item">Missing</option>
+                <option class="dropdown-item">Found</option>
+              </select>
+            </div>
+          </li>
+          </li>
+          <li class="list-group-item"><input style="width:100%;text-align:center" id="breed"placeholder="Breed"></li>
+          <li class="list-group-item"><input style="width:100%;text-align:center" id="color"placeholder="Color"></li>
+          <li class="list-group-item"><input style="width:100%;text-align:center" id="lastLocation"placeholder="Last Location"></li>
+          <li class="list-group-item"><input type="time" style="width:100%;text-align:center"id="lastTime"
+              placeholder="What time did your pet go missing?"></li>
+
+          <li class="list-group-item">
+            <form id="upload_form" method="post" enctype="multipart/form-data">
       <label for="file" <i class="fa fa-download" style="font-size:36px"></i></label>
       <input id="file" type="file" style="display: none;">
       <input type="submit"></input>
     </form>
+          </li>
+        </ul>
+        <div class="card-footer" style="position: 40px ;"><button>Submit Information</button>
 
+        </div>
+      </div>
+    </div>
+ 
 
-    <a href="./browse"><button type="button" class="btn btn-primary browse-home"></button></a>
-    <script src="./js/image.js"></script>
+<div class="col-6">
+  <a href="./browse"><button type="button" class="btn btn-primary browse-home"></button></a>
+</div>
+ </div>
+</div>
+<script src="./js/image.js"></script>
