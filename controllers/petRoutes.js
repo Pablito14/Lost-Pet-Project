@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const {User, Pet} = require("../models/");
-const bcrypt  = require("bcrypt");
+const { User, Pet } = require("../models/");
+const bcrypt = require("bcrypt");
 
 // find all
 router.get("/", (req, res) => {
@@ -19,7 +19,7 @@ router.get("/", (req, res) => {
 
 // find one
 router.get("/:id", (req, res) => {
-  Pet.findByPk(req.params.id,{})
+  Pet.findByPk(req.params.id, {})
     .then(dbPet => {
       res.json(dbPet);
     })
@@ -31,11 +31,16 @@ router.get("/:id", (req, res) => {
 
 // create Pet
 router.post("/", (req, res) => {
-  Pet.create(req.body)
+  console.log(req.body)
+  const newPet = {
+   ...req.body, 
+   user_id: req.session.user.id
+  }
+  Pet.create(newPet)
     .then(newPet => {
       req.session.Pet = {
-        id:newPet.id,
-        Petname:newPet.Petname
+        id: newPet.id,
+        Petname: newPet.Petname
       }
       res.json(newPet);
     })
@@ -43,6 +48,7 @@ router.post("/", (req, res) => {
       console.log(err);
       res.status(500).json({ msg: "an error occured", err });
     });
+
 });
 
 // update Pet
@@ -54,10 +60,10 @@ router.put("/:id", (req, res) => {
   }).then(updatedPet => {
     res.json(updatedPet);
   })
-  .catch(err => {
-    console.log(err);
-    res.status(500).json({ msg: "an error occured", err });
-  });
+    .catch(err => {
+      console.log(err);
+      res.status(500).json({ msg: "an error occured", err });
+    });
 });
 
 // delete a Pet
@@ -69,10 +75,10 @@ router.delete("/:id", (req, res) => {
   }).then(delPet => {
     res.json(delPet);
   })
-  .catch(err => {
-    console.log(err);
-    res.status(500).json({ msg: "an error occured", err });
-  });
+    .catch(err => {
+      console.log(err);
+      res.status(500).json({ msg: "an error occured", err });
+    });
 });
 
 module.exports = router;
