@@ -33,7 +33,7 @@ const pets = [
         animal: "Dog",
         breed: "Golden Retriever",
         color: "Yellow",
-        lastLocation: "address",
+        lastLocation: "47.380748, -122.233538        ",
         lastTime: 11,
         user_id:1,
     },
@@ -44,7 +44,7 @@ const pets = [
         animal: "Dog",
         breed: "Chocolate lab",
         color: "brown",
-        lastLocation: "address",
+        lastLocation: "47.575856, -122.401139",
         lastTime: 11,
         user_id:2,
     },
@@ -55,11 +55,10 @@ const pets = [
         animal: "cat",
         breed: "some sort of cat",
         color: "blue",
-        lastLocation: "address",
+        lastLocation: "47.282139, -122.200083",
         lastTime: 11,
         user_id:3,
     }
- 
     
 ]
 
