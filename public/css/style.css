@@ -1,7 +1,7 @@
-#header {
+/* #header {
     position: sticky;
     top: 0;
-}
+} */
 
 
 
@@ -17,6 +17,18 @@ header {
 
 }
 
+footer {
+    font-size: xx-large;
+    font-family: 'PT Serif', serif;
+    text-align: center;
+    padding: 40px;
+    margin-top: 10px;
+    color: black;
+    text-decoration: none;
+    font-stretch: expanded;
+
+}
+
 .circle {
     position: absolute;
     top: 0;
@@ -24,6 +36,14 @@ header {
     opacity: 0.33;
     z-index: -1;
 }
+
+.dashboard {
+
+    padding: 40px;
+    margin: 40px;
+    
+}
+
 
 
 
@@ -49,3 +69,10 @@ header {
     
 
 }
+
+#map {
+    height: 400px;
+    /* The height is 400 pixels */
+    width: 80%;
+    /* The width is the width of the web page */
+  }

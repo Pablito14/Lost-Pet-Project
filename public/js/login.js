@@ -4,8 +4,9 @@ document.querySelector("#login").addEventListener("submit",e=>{
     const userObj = {
         username:document.querySelector("#loginUsername").value,
         password:document.querySelector("#loginPassword").value,
+        email:document.querySelector("#loginEmail").value,
     }
-    console.log(userObj)
+    // console.log(userObj)
     fetch("/api/users/login",{
         method:"POST",
         body:JSON.stringify(userObj),
@@ -27,6 +28,7 @@ document.querySelector("#signup").addEventListener("submit",e=>{
     const userObj = {
         username:document.querySelector("#signupUsername").value,
         password:document.querySelector("#signupPassword").value,
+        email:document.querySelector("#signupEmail").value,
     }
     console.log(userObj)
     fetch("/api/users/",{
