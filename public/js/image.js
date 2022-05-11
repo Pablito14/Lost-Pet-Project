@@ -1,3 +1,6 @@
+var imageUrl
+
+//CLOUDINARY UPLOAD
 const form = document.querySelector('#upload_form');
 form.addEventListener('submit', async (e) => {
     e.preventDefault()
@@ -21,13 +24,29 @@ form.addEventListener('submit', async (e) => {
 
         })
         .then((data) => {
-            if (data.secure_url !== '') {
-                const uploadedFileUrl = data.secure_url;
-                localStorage.setItem('passportUrl', uploadedFileUrl);
-            }
+            imageUrl = data.secure_url
+            fetch('/api/pets', {
+                method: 'POST',
+                body: JSON.stringify({
+                    name: "Fluffy",
+                    petDescription: "is a dog",
+                    currentStatus: true,
+                    animal: "dog",
+                    breed: "Lab",
+                    color: "brown",
+                    lastLocation: "address",
+                    lastTime: 11,
+                    picture: imageUrl
+                }),
+                headers:{
+                    "Content-Type":"application/json"
+                }
+            }).then((data) => {
+                console.log(data)
+            })
         })
-        .catch(err => console.error(err));
 
+        .catch(err => console.error(err));
 })
 
 
