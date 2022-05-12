@@ -3,22 +3,31 @@
 <div id="map" class="browser-map"></div>
 
 <script async
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnFsBHuxyaO0TGQ7ozMO-V2bgXIf9rPrY&callback=initMap"></script>
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnFsBHuxyaO0TGQ7ozMO-V2bgXIf9rPrY&callback=initMap"></script>
 <script src="./js/geolocation.js"></script>
 
-<section class="container ">
-    <section class="row">
-<div class="card pet-boxes" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">{{name}}</h5>
-    <ul>
-      <li>{{petDesciption}}</li>
-      <li>{{currentStatus}}</li>
-      <li>{{animal}}</li>
-    </ul>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+
+{{!-- =============================== --}}
+
+<div class="menu-container">
+  <div class="card-header col-md-10">
+    <h2>
+      Pets
+    </h2>
   </div>
+  <!-- For each dish in the array of dish objects, the following <div> will be rendered. -->
+  {{#each petDb as |pet|}}
+  <div class="dish col-md-5">
+    <!-- We use dish.id instead of <od> and <li> elements. -->
+    <p>
+      {{pet.id}}.
+      {{pet.name}}
+      {{pet.petDescription}} 
+    </p>
+    <img src={{pet.picture}} alt={{pet.petDescription}}>
+  </div>
+  <div class="col-md-7">
+  </div>
+  {{/each}}
 </div>
-</section>
-</section>
+

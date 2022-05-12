@@ -39,9 +39,9 @@ form.addEventListener('submit', async (e) => {
             var statusElText = statusEl.options[statusEl.selectedIndex].text;
             let isMissing
             if (statusElText === "Missing") {
-                 isMissing = true
+                isMissing = true
             } else {
-                 isMissing = false
+                isMissing = false
             }
             fetch('/api/pets', {
                 method: 'POST',
@@ -56,18 +56,24 @@ form.addEventListener('submit', async (e) => {
                     lastTime: lastTime.value,
                     picture: imageUrl
                 }),
-                headers:{
-                    "Content-Type":"application/json"
+                headers: {
+                    "Content-Type": "application/json"
                 }
             }).then((data) => {
                 console.log(data)
             })
         })
-        
-        .catch(err => console.error(err));
-    })
 
-    
+        .catch(err => console.error(err));
+})
+
+// const buttonEl = document.querySelector("#btn")
+// buttonEl.addEventListener('click', async (e) => {
+//         e.preventDefault()
+//         console.log("I have been clicked")
+// })
+
+
 
 //CREATE PET FUNCTION
 //upon submitting create pet form, post new pet to database.
