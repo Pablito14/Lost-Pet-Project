@@ -1,8 +1,6 @@
 // Initialize and add the map
 //load lat and to the uluru
 
-
-
 //load all information from our database
 var myMap = document.querySelector("#map");
 let myAnswers = " ";
