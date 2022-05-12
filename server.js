@@ -40,8 +40,16 @@ app.use('/',allRoutes);
 app.get('/about', (req,res) => {
   res.render('about', {layout : 'main'});
 })
-app.get('/browse', (req,res) => {
-  res.render('browse', {layout : 'main'});
+app.get('/browse', async (req,res) => {
+  try {
+  const allUserPets = await Pet.findAll();
+  const petDb = allUserPets.map(petDb => petDb.get({plain: true}));
+  console.log(petDb)
+  res.render('browse', {petDb});
+  } catch (err){
+    console.log('======\n' + err + '\n======');
+    res.status(500).json(err);
+}
 })
 app.get('/dashboard', (req,res) => {
   res.render('dashboard', {layout : 'main'});
