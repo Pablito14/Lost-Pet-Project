@@ -33,7 +33,7 @@ const pets = [
         animal: "Dog",
         breed: "Golden Retriever",
         color: "Yellow",
-        lastLocation: "47.380748, -122.233538        ",
+        lastLocation: "47.380748, -122.233538",
         lastTime: 11,
         user_id:1,
     },
