@@ -31,7 +31,7 @@ router.get("/:id", (req, res) => {
 
 // create Pet
 router.post("/", (req, res) => {
-  console.log(req.body)
+  console.log(req.session)
   const newPet = {
    ...req.body, 
    user_id: req.session.user.id
@@ -80,5 +80,6 @@ router.delete("/:id", (req, res) => {
       res.status(500).json({ msg: "an error occured", err });
     });
 });
+
 
 module.exports = router;
