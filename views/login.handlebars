@@ -1,41 +1,23 @@
-<div class="row" style="text-align:center;">
-    <div class="col-sm-3">
-        <div class="card">
-            <div class="card-body">
-               <h5 class="card-title" style="text-align:center ;">Log In</h5>
-                <form action="" id="login">
-                    <ul style="list-style:none; text-align:center;">
-
-                        <li><input type="text" placeholder="Confirm username" id="loginUsername"></li>
-                        
-                        <li><input type="password" placeholder="Confirm Password" id="loginPassword"></li>
-
-                        <li><input type="text" placeholder="email" id="loginEmail"></li>
-
-                    </ul>
-                    <button>Login</button>
-                </form>
-            </div>
-        </div>
+<div class="login-form">
+  <form action="" id="login">
+    <h1>Login</h1>
+    <div class="content">
+      <div class="input-field">
+        <input type="text" placeholder="username" autocomplete="nope" id="loginUsername">
+      </div>
+      <div class="input-field">
+        <input type="email" placeholder="Email" autocomplete="nope" id="loginEmail">
+      </div>
+      <div class="input-field">
+        <input type="password" placeholder="Password" autocomplete="new-password" id="loginPassword">
+      </div>
+      <a href="#" class="link">Forgot Your Password?</a>
     </div>
-    <div class="col-sm-3">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title" style="text-align:center ;">Sign up!</h5>
-                <form action="" id="signup">
-                    <ul style="list-style:none; text-align:center;">
-                        <li><input type="text" placeholder="username"></li>
-                        <li><input type="text" placeholder="Confirm username" id="signupUsername"></li>
-                        <li><input type="text" placeholder="password"></li>
-                        <li><input type="password" placeholder="Confirm Password" id="signupPassword"></li>
-                        <li><input type="text" placeholder="email" id="signupEmail"></li>
-                    </ul>
-                    <button>Sign up!</button>
-                </form>
-
-            </div>
-        </div>
+    <div class="action">
+      <button type="submit" id="signup">Register</button>
+      <button type="submit" id="loginbtn">Sign in</button>
     </div>
+  </form>
 </div>
 
 

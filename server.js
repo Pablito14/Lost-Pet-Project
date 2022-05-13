@@ -40,6 +40,7 @@ app.use('/',allRoutes);
 app.get('/about', (req,res) => {
   res.render('about', {layout : 'main'});
 })
+
 app.get('/browse', async (req,res) => {
   try {
   const allUserPets = await Pet.findAll();
@@ -51,18 +52,28 @@ app.get('/browse', async (req,res) => {
     res.status(500).json(err);
 }
 })
+
 app.get('/dashboard', (req,res) => {
-  res.render('dashboard', {layout : 'main'});
+  if(req.session.user){
+    res.render('dashboard', {layout : 'main'});
+    return;
+  }
+  res.redirect("login");
+  return;
 })
+
 app.get('/home', (req,res) => {
   res.render('home', {layout : 'main'});
 })
+
 app.get('/login', (req,res) => {
-  res.render('login', {layout : 'main'});
+  res.render('dashboard', {layout : 'main'});
 })
+
 app.get('/signup', (req,res) => {
   res.render('signup', {layout : 'main'});
 })
+
 
 sequelize.sync({ force: false }).then(function() {
   app.listen(PORT, function() {

@@ -20,7 +20,7 @@ router.get("/", (req, res) => {
 // logout
 router.get("/logout",(req,res)=>{
   req.session.destroy();
-  res.redirect("/")
+  res.redirect("/home")
 })
 
 // find one
@@ -65,6 +65,7 @@ router.post("/login", (req, res) => {
         id:foundUser.id,
         username:foundUser.username
       }
+      console.log(req.session.user, "********");
       return res.json(foundUser)
     } else {
       return res.status(400).json({msg:"wrong login credentials"})
