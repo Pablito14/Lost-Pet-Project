@@ -31,7 +31,7 @@ router.get("/:id", (req, res) => {
 
 // create Pet
 router.post("/", (req, res) => {
-  console.log(req.session)
+  console.log(req.body)
   const newPet = {
    ...req.body, 
    user_id: req.session.user.id
