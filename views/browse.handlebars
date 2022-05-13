@@ -1,7 +1,9 @@
+{{!-- MAP DISPLAY ON BROWSE PAGE --}}
+
 <h3 style="text-align: center ;">Map of lost pets</h3>
 
 <div id="map" class="browser-map"></div>
-
+{{!-- MAP DISPLAY SOURCE --}}
 <script async
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnFsBHuxyaO0TGQ7ozMO-V2bgXIf9rPrY&callback=initMap"></script>
 <script src="./js/geolocation.js"></script>
@@ -9,25 +11,60 @@
 
 {{!-- =============================== --}}
 
-<div class="menu-container">
-  <div class="card-header col-md-10">
+{{!-- DATABASE CARD GENERATOR FOR PET CARDS INPUTTED --}}
+{{!-- CARDS DISPLAY SETTING IN CONTAINER --}}
+<section class="container px-4 d-flex">
+  {{!-- SELECTION FROM PET DATABASE --}}
+  {{#each petDb as |pet|}}
+  <section class="p-3 m-2">
+    {{!-- CARD FOR PET INFORMATION --}}
+    <div class=" col card browse-card" style="width: 18rem; text-align:center;">
+      {{!-- PICTURE OF PET SOURCE --}}
+      <img src={{pet.picture}} class="card-img-top" alt={{pet.petDescription}}>
+      <div class="card-body">
+        <h5 class="card-title">{{pet.name}}</h5>
+        <p class="card-text">
+          {{!-- LIST OF PET SPECIFIC INFORMATION FOR PET CARD --}}
+        <ul style="list-style:none;text-align:center;">
+          <li class="border-bottom">Description<br>{{pet.petDescription}}</li>
+          <li class="border-bottom">Type of pet<br>{{pet.animal}}</li>
+          <li class="border-bottom">Pet Breed<br>{{pet.breed}}</li>
+          <li class="border-bottom">Color of animal<br>{{pet.color}}</li>
+          <li class="border-bottom">Is your pet lost<br>{{pet.currentStatus}}</li>
+        </ul>
+        </p>
+
+      </div>
+    </div>
+  </section>
+  {{/each}}
+</section>
+
+
+
+{{!-- <div class="menu-container" style="text-align:center;">
+  <div class="card-header col-md-12" style="text-align:center ;">
     <h2>
-      Pets
+      Lost pets
     </h2>
   </div>
   <!-- For each dish in the array of dish objects, the following <div> will be rendered. -->
   {{#each petDb as |pet|}}
-  <div class="dish col-md-5">
+  <div class="dish col-md-12">
     <!-- We use dish.id instead of <od> and <li> elements. -->
     <p>
+
+    <ul style="list-style: none ;">
       {{pet.id}}.
-      {{pet.name}}
-      {{pet.petDescription}} 
+      <li>{{pet.name}}</li>
+      <li>{{pet.petDescription}}</li>
+      <li>{{pet.breed}}</li>
+    </ul>
+
     </p>
     <img src={{pet.picture}} alt={{pet.petDescription}}>
   </div>
   <div class="col-md-7">
   </div>
   {{/each}}
-</div>
-
+</div> --}}
