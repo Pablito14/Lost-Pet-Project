@@ -70,8 +70,26 @@ background-attachment: fixed;
 background-size: contain;
 }
 
+/* BACKGROUND FOR LOST PET CARD DISPLAY */
+.browse-card {
+    text-align: center;
+    color: white;
+    margin: auto;
+    background-color: #122955;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 1000'%3E%3Cg %3E%3Ccircle fill='%23122955' cx='50' cy='0' r='50'/%3E%3Cg fill='%2312315e' %3E%3Ccircle cx='0' cy='50' r='50'/%3E%3Ccircle cx='100' cy='50' r='50'/%3E%3C/g%3E%3Ccircle fill='%23123968' cx='50' cy='100' r='50'/%3E%3Cg fill='%23114172' %3E%3Ccircle cx='0' cy='150' r='50'/%3E%3Ccircle cx='100' cy='150' r='50'/%3E%3C/g%3E%3Ccircle fill='%2310497b' cx='50' cy='200' r='50'/%3E%3Cg fill='%230d5284' %3E%3Ccircle cx='0' cy='250' r='50'/%3E%3Ccircle cx='100' cy='250' r='50'/%3E%3C/g%3E%3Ccircle fill='%23085b8e' cx='50' cy='300' r='50'/%3E%3Cg fill='%23026397' %3E%3Ccircle cx='0' cy='350' r='50'/%3E%3Ccircle cx='100' cy='350' r='50'/%3E%3C/g%3E%3Ccircle fill='%23006ca0' cx='50' cy='400' r='50'/%3E%3Cg fill='%230076a9' %3E%3Ccircle cx='0' cy='450' r='50'/%3E%3Ccircle cx='100' cy='450' r='50'/%3E%3C/g%3E%3Ccircle fill='%23007fb2' cx='50' cy='500' r='50'/%3E%3Cg fill='%230088bb' %3E%3Ccircle cx='0' cy='550' r='50'/%3E%3Ccircle cx='100' cy='550' r='50'/%3E%3C/g%3E%3Ccircle fill='%230092c3' cx='50' cy='600' r='50'/%3E%3Cg fill='%23009bcc' %3E%3Ccircle cx='0' cy='650' r='50'/%3E%3Ccircle cx='100' cy='650' r='50'/%3E%3C/g%3E%3Ccircle fill='%2300a5d4' cx='50' cy='700' r='50'/%3E%3Cg fill='%2300aedc' %3E%3Ccircle cx='0' cy='750' r='50'/%3E%3Ccircle cx='100' cy='750' r='50'/%3E%3C/g%3E%3Ccircle fill='%2300b8e3' cx='50' cy='800' r='50'/%3E%3Cg fill='%2300c2eb' %3E%3Ccircle cx='0' cy='850' r='50'/%3E%3Ccircle cx='100' cy='850' r='50'/%3E%3C/g%3E%3Ccircle fill='%2300ccf2' cx='50' cy='900' r='50'/%3E%3Cg fill='%2300d6f8' %3E%3Ccircle cx='0' cy='950' r='50'/%3E%3Ccircle cx='100' cy='950' r='50'/%3E%3C/g%3E%3Ccircle fill='%2309E0FF' cx='50' cy='1000' r='50'/%3E%3C/g%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: contain;
+
+}
+/* DISPLAY SETTING FOR CARD IMAGE IN BROWSE HANDLEBAR */
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
 
 
+/* DISPLAY BACKGROUND SETTINGS FOR HOME PAGE LOGIN BACKGROUND */
 .login-home {
     font-size: 400px 400px 400px;
     padding: 300px 300px;
@@ -83,7 +101,7 @@ background-size: contain;
 
 
 }
-
+/* DISPLAY SETTINGS FOR HOME PAGE BROWSE BACKGROUND */
 .browse-home {
     font-size: 400px 400px 400px;
     padding: 300px 300px;
@@ -94,6 +112,7 @@ background-size: contain;
 
 }
 
+/* DASHBOARD BROWSE BUTTON BACKGROUND */
 .browse-dashboard {
     padding: 300px 300px;
     margin: 100px;
@@ -108,19 +127,10 @@ background-size: contain;
     /* The width is the width of the web page */
   }
 
-
+/* BROWSER MAP DISPLAY SETTINGS */
   .browser-map {
       max-width:80%;
       margin: auto;
       border:5px solid #555
   }
 
- .pet-boxes {
-     justify-content: center;
-     padding: 2%;
-     margin: 5%;
- }
-
- .pet-boxes:hover {
-     background-color: lightcyan;
- }
