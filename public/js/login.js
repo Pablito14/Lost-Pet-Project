@@ -1,4 +1,3 @@
-console.log("login linked1")
 document.querySelector("#login").addEventListener("submit",e=>{
     e.preventDefault();
     const userObj = {
