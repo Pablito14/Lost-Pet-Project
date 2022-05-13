@@ -1,12 +1,12 @@
-console.log("login linked1")
-document.querySelector("#login").addEventListener("submit",e=>{
+
+document.querySelector("#loginbtn").addEventListener("click",e=>{
     e.preventDefault();
     const userObj = {
         username:document.querySelector("#loginUsername").value,
         password:document.querySelector("#loginPassword").value,
         email:document.querySelector("#loginEmail").value,
     }
-    // console.log(userObj)
+    console.log(userObj)
     fetch("/api/users/login",{
         method:"POST",
         body:JSON.stringify(userObj),
@@ -16,6 +16,7 @@ document.querySelector("#login").addEventListener("submit",e=>{
     }).then(res=>{
         if(res.ok){
             console.log("logged in!")
+            location.href="/dashboard"
         } else {
             alert("trumpet sound")
         }
@@ -23,12 +24,12 @@ document.querySelector("#login").addEventListener("submit",e=>{
 })
 
 
-document.querySelector("#signup").addEventListener("submit",e=>{
+document.querySelector("#signup").addEventListener("click",e=>{
     e.preventDefault();
     const userObj = {
-        username:document.querySelector("#signupUsername").value,
-        password:document.querySelector("#signupPassword").value,
-        email:document.querySelector("#signupEmail").value,
+        username:document.querySelector("#loginUsername").value,
+        password:document.querySelector("#loginPassword").value,
+        email:document.querySelector("#loginEmail").value,
     }
     console.log(userObj)
     fetch("/api/users/",{
