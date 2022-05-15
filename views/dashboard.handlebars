@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-6">
+    <div class="col-sm-6 col-md-5 col-lg-6">
       <div class="card report">
         <ul class="list-group list-group-flush">
           <h3>Report Lost Pet</h3>
@@ -40,7 +40,7 @@
           <li class="list-group-item"><input style="width:100%;text-align:center" id="breed" placeholder="Breed"></li>
           <li class="list-group-item"><input style="width:100%;text-align:center" id="color" placeholder="Color"></li>
           <li class="list-group-item"><input style="width:100%;text-align:center" id="lastLocation"
-              placeholder="Last Location"></li>
+              placeholder="Last Location  (latitude, longitude)"></li>
           <li class="list-group-item"><input style="width:100%;text-align:center" id="lastTime"
               placeholder="What time did your pet go missing?"></li>
 
@@ -59,11 +59,36 @@
 
 
 
-    <div class="col-6">
-      <a href="/browse"><button type="button" id="btn" class="btn btn-primary browse-dashboard"></button></a>
+    <div class="col-sm-6 col-md-5 offset-md-2 col-lg-6 offset-lg-0">
+      <div class="card mb-3">
+        <img
+          src="https://images.unsplash.com/photo-1555685812-4b943f1cb0eb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+          class="card-img-top" alt="cute and confused kitten">
+        <div class="card-body">
+          <h5 class="card-title">Browse Lost pets</h5>
+          <p class="card-text">We would like to encourage that when you are done filling out a report, to please visit
+            the browse pet page. With your help we can find all the lost pets in your area and help get them home
+            safely.</p>
+          <a href="/browse"><button type="button" class="btn btn-info" style="text-align:center;">Browse Lost
+              Pets</button></a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Consider getting your pet a microchip</h5>
+          <p class="card-text">Click the button below to learn more information</p><br>
+          <a href="https://companionprotect.com/2021/03/31/reasons-to-microchip-your-dog-cat-pet/"><button
+            class="btn btn-primary">5 REASONS TO MICROCHIP </button></a>
+          
+        </div>
+        <img src="https://companionprotect.com/wp-content/uploads/2021/03/7004_005_5ReasonsMicrochip.png"
+          class="card-img-bottom" alt="...">
+      </div>
+      {{!-- <a href="/browse"><button type="button" id="btn" class="btn btn-primary browse-dashboard"></button></a> --}}
     </div>
   </div>
+</div>
 
-  <script src="./js/image.js"></script>
-  {{!--
-  <script src=".js/someName.js"></script> --}}
+<script src="./js/image.js"></script>
+{{!--
+<script src=".js/someName.js"></script> --}}

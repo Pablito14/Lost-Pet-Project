@@ -237,3 +237,23 @@ background-size: contain;
   .login-form .action button:nth-child(2):hover {
     background: #3c4d6d;
   }
+
+
+  
+/* Smartphones (portrait) -----------
+@media only screen
+and (max-width : 320px) {
+
+}
+
+/* Desktops and laptops ----------- */
+/* @media only screen
+and (min-width : 1224px) {
+
+} */
+
+/* Large screens ----------- */
+/* @media only screen
+and (min-width : 1824px) {
+
+} */ 
