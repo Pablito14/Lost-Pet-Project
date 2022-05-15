@@ -238,22 +238,22 @@ background-size: contain;
     background: #3c4d6d;
   }
 
+/* Flexbox stuff */
+@media screen and (min-width: 40em) {
+  .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+  }
 
-  
-/* Smartphones (portrait) -----------
-@media only screen
-and (max-width : 320px) {
-
+  .card {
+      flex: 0 1 calc(50% - 1em);
+  }
 }
 
-/* Desktops and laptops ----------- */
-/* @media only screen
-and (min-width : 1224px) {
+@media screen and (min-width: 60em) {
 
-} */
-
-/* Large screens ----------- */
-/* @media only screen
-and (min-width : 1824px) {
-
-} */ 
+  .card {
+      flex: 0 1 calc(25% - 1em);
+  }
+}
