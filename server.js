@@ -67,7 +67,7 @@ app.get('/home', (req,res) => {
 })
 
 app.get('/login', (req,res) => {
-  res.render('dashboard', {layout : 'main'});
+  res.render('login', {layout : 'main'});
 })
 
 app.get('/signup', (req,res) => {
