@@ -237,3 +237,27 @@ background-size: contain;
   .login-form .action button:nth-child(2):hover {
     background: #3c4d6d;
   }
+/* About styling */
+  .team-member > h3{
+    text-align: center;
+  }
+
+/* Flexbox stuff */
+@media screen and (min-width: 40em) {
+  .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+  }
+
+  .card {
+      flex: 0 1 calc(50% - 1em);
+  }
+}
+
+@media screen and (min-width: 60em) {
+
+  .card {
+      flex: 0 1 calc(25% - 1em);
+  }
+}

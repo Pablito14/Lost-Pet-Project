@@ -13,12 +13,12 @@
 
 {{!-- DATABASE CARD GENERATOR FOR PET CARDS INPUTTED --}}
 {{!-- CARDS DISPLAY SETTING IN CONTAINER --}}
-<section class="container px-4 d-flex">
+<section class="container px-4 d-flex cards">
   {{!-- SELECTION FROM PET DATABASE --}}
   {{#each petDb as |pet|}}
   <section class="p-3 m-2">
     {{!-- CARD FOR PET INFORMATION --}}
-    <div class=" col card browse-card" style="width: 18rem; text-align:center;">
+    <div class=" col cards browse-card" style="width: 18rem; text-align:center;">
       {{!-- PICTURE OF PET SOURCE --}}
       <img src={{pet.picture}} class="card-img-top" alt={{pet.petDescription}}>
       <div class="card-body">
