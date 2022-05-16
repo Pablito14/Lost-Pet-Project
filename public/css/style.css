@@ -237,6 +237,10 @@ background-size: contain;
   .login-form .action button:nth-child(2):hover {
     background: #3c4d6d;
   }
+/* About styling */
+  .team-member > h3{
+    text-align: center;
+  }
 
 /* Flexbox stuff */
 @media screen and (min-width: 40em) {
